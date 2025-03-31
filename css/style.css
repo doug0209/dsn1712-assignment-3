@@ -1,7 +1,9 @@
 body{
     margin: 0;
 }
-
+img{
+    width: 100%;
+}
 header{
     background-color:#000;
     color:  #fff;
@@ -92,20 +94,23 @@ h1 {
     margin: 0 auto; 
     padding-bottom: 30px;
 }
-.grid-container {
+#about-me .wrapper{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: 2fr 1fr; 
     gap: 20px; 
 }
-article {
+.card {
     display: flex;
-    flex-direction: column;
     background-color: #fff;
-    padding: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    
 }
+
+.card article{
+    padding:10px  25px; 
+
+}
+
 article button {
     margin-top: auto; 
     padding: 10px 20px;
@@ -119,15 +124,35 @@ article button:hover {
     background-color: white;
     color: black;
 }
-section p {
-    max-width: 70%; 
-    margin: 0 auto; 
-    padding-bottom: 30px;  
-}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
+}
+.image-grid{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "div1 div1 div1 div2 div2 div2"
+  "div3 div3 div4 div4 div5 div5";
+}
+
+.image-grid img:nth-child(1){
+    grid-area: div1;
+}
+.image-grid img:nth-child(2){
+    grid-area: div2;
+}
+.image-grid img:nth-child(3){
+    grid-area: div3;
+}
+.image-grid img:nth-child(4){
+    grid-area: div4;
+}
+.image-grid img:nth-child(5){
+    grid-area: div5;
 }
 .grid-item img {
     width: 100%;
